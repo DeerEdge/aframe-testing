@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>Basic Scene - A-Frame</title>
+    <meta name="description" content="Basic Scene - A-Frame" />
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B9HGM8RYH1&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /><script>WebFont.load({google: {families: ["Roboto", "Roboto Mono"]}});</script><script src="https://unpkg.com/super-hands@^1.0.0/dist/super-hands.min.js" data-component-description="All-in-one natural hand controller interaction component for A-Frame." data-component-names="clickable, drag-droppable, grabbable, hoverable, progressive-controls, stretchable, super-hands" data-component-url="https://npmjs.com/package/super-hands" data-package-name="super-hands"></script><script src="https://unpkg.com/aframe-animation-component@^3.2.x/dist/aframe-animation-component.min.js" data-component-description="Animations in A-Frame using anime.js" data-component-names="animation" data-component-url="https://npmjs.com/package/aframe-animation-component" data-package-name="aframe-animation-component"></script></head>
+  <body class="a-body aframe-inspector-opened" data-new-gr-c-s-check-loaded="14.1196.0" data-gr-ext-installed="">
+    <a-scene class="fullscreen" canvas="" inspector="url:https://unpkg.com/aframe-inspector@0.5.x/dist/aframe-inspector.min.js" keyboard-shortcuts="enterVR:true;exitVR:true;resetSensor:true" screenshot="width:4096;height:2048" vr-mode-ui="enabled:true" auto-enter-vr="display:GearVR;enabled:true">
+      <a-assets>
+        
+        
+        
+      <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg" crossorigin="anonymous" /><img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous" /><img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous" /></a-assets>
+
+      <a-box position="0 2.161 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture" visible="true" material="src:#boxTexture" geometry="primitive:box">
+        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite" to="0 2.2 -5"></a-animation>
+        <a-animation attribute="position" begin="click" dur="1500" to="0 10 -5"></a-animation>
+        <a-animation attribute="position" begin="click" dur="1000" from="0 10 -5" to="0 2 -5"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      </a-box>
+
+      <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048" position="0 0 0" rotation="0 0 0" scale="-1 1 1" visible="true" material="color:#FFF;shader:flat;height:2048;src:#skyTexture;width:2048" geometry="primitive:sphere;radius:30;segmentsWidth:64;segmentsHeight:20;thetaLength:90"></a-sky>
+      <a-light type="ambient" color="#445451" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" light="type:ambient;color:#445451"></a-light>
+      <a-light type="point" intensity="2" position="2 4 4" rotation="0 0 0" scale="1 1 1" visible="true" light="type:point;intensity:2"></a-light>
+      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" position="0 0 0" scale="1 1 1" visible="true" material="src:#groundTexture" geometry="primitive:plane;height:100;width:100"></a-plane>
+      <a-text value="Hello, A-Frame!" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5" rotation="0 0 0" visible="true" text="anchor:align;width:5;value:Hello, A-Frame!;color:#BBB"></a-text>
+
+
+      <a-camera position="-0.14584145206000337 1.805 1.468043890410209" rotation="-5.844169510334404 19.709748152500335 0" scale="1 1 1" visible="true" camera="userHeight:1.6;active:false" look-controls="" wasd-controls="wsAxis:z;fly:false">
+        <a-cursor color="#FAFAFA" position="0 0 -1" rotation="0 0 0" scale="1 1 1" visible="true" material="color:#FAFAFA;shader:flat;opacity:0.8" raycaster="far:1000" cursor="" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64"></a-cursor>
+      </a-camera>
+    <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="3180" height="1808" style="width: 1590px; height: 904px;"></canvas><a-entity camera="far:10000;fov:50;near:0.05;active:true" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity><a-entity position="-3.738 2.063 -1.351" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:sphere" material="" animation=""></a-entity></a-scene>
+  
